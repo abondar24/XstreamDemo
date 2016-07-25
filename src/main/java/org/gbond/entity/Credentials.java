@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.cisco.netflowiebase.entity;
+package org.gbond.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

@@ -4,14 +4,12 @@
  * and open the template in the editor.
  */
 
-package com.cisco.netflowiebase.entity;
+package org.gbond.entity;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import java.io.Serializable;
 import java.lang.ref.Reference;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -26,7 +24,6 @@ import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlTransient;

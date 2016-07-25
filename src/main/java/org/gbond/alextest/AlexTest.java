@@ -5,9 +5,9 @@
  */
 package org.gbond.alextest;
 
-import com.cisco.netflowiebase.entity.DataType;
-import com.cisco.netflowiebase.entity.Field;
-import com.cisco.netflowiebase.entity.FieldDefinitions;
+import org.gbond.entity.DataType;
+import org.gbond.entity.Field;
+import org.gbond.entity.FieldDefinitions;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.basic.AbstractSingleValueConverter;
 import java.io.InputStream;

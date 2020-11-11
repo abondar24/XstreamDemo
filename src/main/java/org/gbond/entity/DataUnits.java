@@ -7,6 +7,7 @@
 package org.gbond.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -73,13 +74,10 @@ public class DataUnits implements Serializable {
             return false;
         }
         final DataUnits other = (DataUnits) obj;
-        if (this.id != other.id) {
+        if (!this.id.equals(other.id)) {
             return false;
         }
-        if ((this.unit_name == null) ? (other.unit_name != null) : !this.unit_name.equals(other.unit_name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.unit_name, other.unit_name);
     }
 
     @Override

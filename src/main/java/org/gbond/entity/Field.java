@@ -10,6 +10,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import java.io.Serializable;
 import java.lang.ref.Reference;
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -238,43 +239,43 @@ public class Field implements Serializable {
             return false;
         }
         final Field other = (Field) obj;
-        if (this.id != other.id && (this.id == null || !this.id.equals(other.id))) {
+        if (!this.id.equals(other.id) && (this.id == null || !this.id.equals(other.id))) {
             return false;
         }
-        if ((this.name == null) ? (other.name != null) : !this.name.equals(other.name)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if ((this.description == null) ? (other.description != null) : !this.description.equals(other.description)) {
+        if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (this.updateTime != other.updateTime && (this.updateTime == null || !this.updateTime.equals(other.updateTime))) {
+        if (!Objects.equals(this.updateTime, other.updateTime)) {
             return false;
         }
-        if (this.netflowID != other.netflowID && (this.netflowID == null || !this.netflowID.equals(other.netflowID))) {
+        if (!Objects.equals(this.netflowID, other.netflowID)) {
             return false;
         }
-        if (this.status != other.status && (this.status == null || !this.status.equals(other.status))) {
+        if (!Objects.equals(this.status, other.status)) {
             return false;
         }
-        if (this.dataType != other.dataType && (this.dataType == null || !this.dataType.equals(other.dataType))) {
+        if (!Objects.equals(this.dataType, other.dataType)) {
             return false;
         }
-        if (this.semantics != other.semantics && (this.semantics == null || !this.semantics.equals(other.semantics))) {
+        if (!Objects.equals(this.semantics, other.semantics)) {
             return false;
         }
-        if (this.dataUnits != other.dataUnits && (this.dataUnits == null || !this.dataUnits.equals(other.dataUnits))) {
+        if (!Objects.equals(this.dataUnits, other.dataUnits)) {
             return false;
         }
-        if (this.credentials != other.credentials && (this.credentials == null || !this.credentials.equals(other.credentials))) {
+        if (!Objects.equals(this.credentials, other.credentials)) {
             return false;
         }
-        if (this.platform != other.platform && (this.platform == null || !this.platform.equals(other.platform))) {
+        if (!Objects.equals(this.platform, other.platform)) {
             return false;
         }
-        if ((this.reference == null) ? (other.reference != null) : !this.reference.equals(other.reference)) {
+        if (!Objects.equals(this.reference, other.reference)) {
             return false;
         }
-        if (this.validated != other.validated && (this.validated == null || !this.validated.equals(other.validated))) {
+        if (!Objects.equals(this.validated, other.validated)) {
             return false;
         }
         return true;
@@ -299,4 +300,3 @@ public class Field implements Serializable {
 
 }
 
-    

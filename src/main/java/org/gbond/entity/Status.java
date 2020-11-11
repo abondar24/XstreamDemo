@@ -7,6 +7,7 @@
 package org.gbond.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -76,13 +77,10 @@ public class Status implements Serializable {
             return false;
         }
         final Status other = (Status) obj;
-        if (this.id != other.id) {
+        if (!this.id.equals(other.id)) {
             return false;
         }
-        if ((this.status_name == null) ? (other.status_name != null) : !this.status_name.equals(other.status_name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.status_name, other.status_name);
     }
 
     @Override

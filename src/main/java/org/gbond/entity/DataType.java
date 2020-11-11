@@ -7,6 +7,7 @@
 package org.gbond.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -80,7 +81,7 @@ public class DataType implements Serializable {
         if (this.id != other.id) {
             return false;
         }
-        if ((this.datatype_name == null) ? (other.datatype_name != null) : !this.datatype_name.equals(other.datatype_name)) {
+        if (!Objects.equals(this.datatype_name, other.datatype_name)) {
             return false;
         }
         return true;

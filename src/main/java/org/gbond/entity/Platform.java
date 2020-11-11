@@ -7,6 +7,7 @@
 package org.gbond.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -74,13 +75,10 @@ public class Platform implements Serializable {
             return false;
         }
         final Platform other = (Platform) obj;
-        if (this.id != other.id && (this.id == null || !this.id.equals(other.id))) {
+        if (!Objects.equals(this.id, other.id)) {
             return false;
         }
-        if ((this.platform_name == null) ? (other.platform_name != null) : !this.platform_name.equals(other.platform_name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.platform_name, other.platform_name);
     }
 
     @Override

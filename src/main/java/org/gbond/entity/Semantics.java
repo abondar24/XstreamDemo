@@ -7,6 +7,7 @@
 package org.gbond.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -74,13 +75,10 @@ public class Semantics implements Serializable {
             return false;
         }
         final Semantics other = (Semantics) obj;
-        if (this.id != other.id) {
+        if (!this.id.equals(other.id)) {
             return false;
         }
-        if ((this.semantics_name == null) ? (other.semantics_name != null) : !this.semantics_name.equals(other.semantics_name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.semantics_name, other.semantics_name);
     }
 
     @Override

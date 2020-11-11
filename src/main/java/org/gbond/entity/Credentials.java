@@ -7,6 +7,7 @@
 package org.gbond.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -130,25 +131,25 @@ public class Credentials implements Serializable  {
             return false;
         }
         final Credentials other = (Credentials) obj;
-        if (this.id != other.id && (this.id == null || !this.id.equals(other.id))) {
+        if (!Objects.equals(this.id, other.id)) {
             return false;
         }
-        if ((this.username == null) ? (other.username != null) : !this.username.equals(other.username)) {
+        if (!Objects.equals(this.username, other.username)) {
             return false;
         }
-        if ((this.password == null) ? (other.password != null) : !this.password.equals(other.password)) {
+        if (!Objects.equals(this.password, other.password)) {
             return false;
         }
-        if (this.netflowPolice != other.netflowPolice && (this.netflowPolice == null || !this.netflowPolice.equals(other.netflowPolice))) {
+        if (!Objects.equals(this.netflowPolice, other.netflowPolice)) {
             return false;
         }
-        if ((this.position == null) ? (other.position != null) : !this.position.equals(other.position)) {
+        if (!Objects.equals(this.position, other.position)) {
             return false;
         }
-        if ((this.firstName == null) ? (other.firstName != null) : !this.firstName.equals(other.firstName)) {
+        if (!Objects.equals(this.firstName, other.firstName)) {
             return false;
         }
-        if ((this.lastName == null) ? (other.lastName != null) : !this.lastName.equals(other.lastName)) {
+        if (!Objects.equals(this.lastName, other.lastName)) {
             return false;
         }
         return true;
